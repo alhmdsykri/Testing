@@ -1,0 +1,45 @@
+{
+  "name": "astrafms-services-utilities",
+  "version": "1.5.1",
+  "description": "Common Services utilities for sending to service bus or event hub",
+  "main": "dist/index.js",
+  "scripts": {
+    "clean": "rimraf dist/*",
+    "tsc": "tsc -p ./tsconfig.json",
+    "build": "npm-run-all clean tsc",
+    "test": "jest -c ./jest.unit.json",
+    "test:coverage": "jest --coverage -c ./jest.unit.coverage.json"
+  },
+  "author": "Paul, Bagas, Sans, Mentari",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/express": "^4.17.13",
+    "@types/jest": "^27.4.1",
+    "@types/lodash": "^4.14.191",
+    "@types/stack-trace": "^0.0.30",
+    "i": "^0.3.7",
+    "jest": "^27.5.1",
+    "npm": "^9.2.0",
+    "npm-run-all": "^4.1.5",
+    "rimraf": "^3.0.2",
+    "ts-jest": "^27.1.4",
+    "ts-node": "^10.7.0",
+    "ts-node-dev": "^1.1.8",
+    "typescript": "^4.6.3"
+  },
+  "dependencies": {
+    "@azure/event-hubs": "^5.8.0",
+    "@azure/service-bus": "^7.5.1",
+    "@types/request-promise": "^4.1.48",
+    "@vonage/server-sdk": "^2.11.2",
+    "applicationinsights": "^2.3.2",
+    "astrafms-services-error-logging": "^1.12.1",
+    "dotenv": "^16.0.0",
+    "express": "^4.18.1",
+    "request-promise": "^4.2.6",
+    "stack-trace": "^0.0.10",
+    "tslint": "^6.1.3",
+    "winston": "^3.7.2",
+    "winston-daily-rotate-file": "^4.6.1"
+  }
+}

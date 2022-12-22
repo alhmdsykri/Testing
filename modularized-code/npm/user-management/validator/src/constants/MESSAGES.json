@@ -1,0 +1,141 @@
+{
+  "ERROR": {
+      "RESOURCE": {
+          "UNAVAILABLE": "Resource not found",
+          "TRANSACTIONID": "Invalid, request header missing transactionId",
+          "USERID": "Invalid, request header missing userId",
+          "USERID_MUST_BE_NUMBER": "Invalid, request header userId must be number",
+          "APPID_REQUIRED": "Invalid, appId must have a number value",
+          "APPID_MUST_BE_NUMBER": "Invalid, appId must be number",
+          "APPID_MUST_BE_GREATER_THAN_ZERO": "Invalid, appId must be greater than zero",
+          "ROLEID_MUST_BE_NUMBER": "Invalid, request header roleId must be number",
+          "LOCATION_MUST_BE_NUMBER": "Invalid, request header locationId must be number"
+      },
+      "DEFAULT": {
+          "UNEXPECTED": "Internal Server Error",
+          "DATABASE_ERROR": "There is an error in DB, Please contact IT support.",
+          "INTERNAL_API_ERROR": "There is an error in application integration, Please contact IT support."
+      },
+      "USER_LOGIN": {
+          "MISSING_TYPE": "Invalid, request body missing type",
+          "TYPE_INT": "Invalid, request body type must be number",
+          "MISSING_EMAIL": "Invalid, request body missing email as username",
+          "MISSING_PASSWORD": "Invalid, request body missing password",
+          "USER_NOT_FOUND": "Invalid, User not found!",
+          "USER_SUSPENDED": "Your user is suspended, please contact the FMS helpdesk"
+      },
+      "USER_LOGIN_PERSONAL_ID": {
+          "MISSING_TYPE": "Invalid, request body missing type",
+          "TYPE_INT": "Invalid, request body type must be number",
+          "TYPE_STRING": "Invalid, request body Personal Id must be in a string",
+          "MISSING_PERSONAL_ID": "Invalid, request body missing Personal Id",
+          "USER_PERSONAL_ID_NOT_FOUND": "The Personal ID is invalid.",
+          "MISSING_OTP": "Invalid, request body missing otp",
+          "MISSING_OTP_NOT_FOUND": "Invalid, otp not found, expired or already consumed",
+          "PERSONAL_ID_LENGTH": "Invalid, Personal Id should be 8 characters"
+      },
+      "USER": {
+          "NOT_FOUND": "Invalid, userId not found",
+          "DUPLICATING_ROLEID": "Invalid, roleId duplicated",
+          "MISSING_ROLEID": "Invalid, roleId not found",
+          "MUST_BE_NUMBER_ROLEID": "Invalid, roleId must be number",
+          "MISSING_NAME": "Invalid, request body missing name",
+          "MISSING_EMAIL": "Invalid, request body missing email",
+          "MISSING_ROLES": "Invalid, request body missing roles",
+          "EMAIL_REGEX": "Invalid, invalid email format",
+          "USER_NOT_FOUND": "User not Found",
+          "USERID_MUST_BE_NUMBER": "Invalid, userId must be number",
+          "ROLES_ACTIVE": "Invalid, user role is still active",
+          "UNREADY_MODIFY": "Invalid,  user  unready modify ",
+          "MAX_CHAR": "Invalid,  name must have a maximum of 50  characters",
+          "NAME_FORMAT": "Invalid, name must use string format",
+          "MAX_ROLES": "Invalid, roles must have a maximum of 5 fields"
+      },
+      "ROLE": {
+          "DUPLICATING_PERMISSIONID": "Invalid, duplicating request body permissionId",
+          "ALREADY_EXIST_ROLE_APPROVAL": "Invalid, role approval already exist",
+          "DUPLICATING_APPROVAL_TOPIC_ID": "Invalid, duplicating request body approvalTopicId",
+          "INVALID_TOPIC_ID": "invalid, invalid approvalTopicId",
+          "INVALID_LEVEL_ID": "invalid, invalid approvalLevelId",
+          "MISSING_KEY_NAME": "Invalid, request body missing name",
+          "MISSING_KEY_PERMISSIONS": "Invalid, request body missing permissions",
+          "MISSING_KEY_APPROVALS": "Invalid, request body missing approvals",
+          "ALREADY_EXIST": "Invalid, role name already exist",
+          "MISSING_ROLEID": "roleId not Found",
+          "MISSING_APPROVAL_ROLE_ID": "RoleId not Found",
+          "REGEX": "Invalid, Role name should be alphanumeric, symbol and space",
+          "MAX_CHAR": "Invalid, role name must have a maximum of 60 characters",
+          "PERMISSION_VALUE": "Invalid, access value (visible, enable, active) should be 1 or 0 only",
+          "PERMISSION_ID": "Invalid, permissionId must be number",
+          "MISSING_PERMISSION": "Invalid, request body missing permission",
+          "USER_MUST_HAVE_ROLE": "Invalid, user must have at least one role",
+          "MISSING_COMPANY_ID": "Invalid, missing companyId",
+          "MUST_BE_NUMBER_COMPANY_ID": "Invalid, companyId must be number",
+          "INVALID_ROLEID": "Invalid, the roleId value is invalid",
+          "TYPE_APPROVAL_ID": "invalid, approvalTopicId must be number",
+          "TYPE_APPROVAL_LEVEL_ID": "invalid, approvalLevel must be number",
+          "TYPE_APPROVAL_SEGATED_OF_DUTY": "invalid, segatedOfDuty must be boolean",
+          "MISSING_PERMISSION_ID": "Invalid, request body missing permissionId",
+          "DUPLICATING_LEVELID": "Invalid, duplicating request body levelId",
+          "TOPIC_ID_NOT_IN_DB": "invalid, topic id is not in database",
+          "LEVEL_ID_NOT_IN_DB": "invalid, the id level does not match the tipic id in the database",
+          "ROLE_ACTIVE": "role is still active",
+          "ROLE_IS_SUPER_ADMIN": "Invalid, request body isSuperAdmin must boolean true or false",
+          "ROLE_UNREADY_MODIFY": "Invalid, role unready modify ",
+          "MUST_BE_NUMBER_LOCATION_ID": "Invalid, locationId must be number"
+      },
+      "ROLE_APPROVAL": {
+          "IS_DELETED": "Invalid, role approval has already been deleted",
+          "MUST_BE_NUMBER": "Invalid, roleApprovalId must be number",
+          "MAX_ROLE_APPROVAL": "Invalid, roleApproval must have a maximum of 3 fields"
+      },
+      "PAGINATION": {
+          "PAGE": {
+              "MISSING": "Invalid, missing page",
+              "MUST_BE_NUMBER": "Invalid, page must be number",
+              "MUST_BE_GREATER_THAN_ZERO": "Invalid, page must be greater than zero"
+          },
+          "ROW": {
+              "MISSING": "Invalid, missing row",
+              "MUST_BE_NUMBER": "Invalid, row must be number",
+              "MUST_BE_GREATER_THAN_ZERO": "Invalid, row must be greater than zero"
+          }
+      },
+      "ROLE_POSITIONS": {
+          "MISSING_COMPANY": "Invalid, must have least 1 company",
+          "MISSING_COMPANY_ID": "Invalid, missing company Id or must be an integer",
+          "MISSING_COMPANY_CODE": "Invalid, missing company code",
+          "MISSING_COMPANY_NAME": "Invalid, missing company name",
+          "MISSING_BUSINESS_UNIT": "Invalid, must have at least 1 Business Unit",
+          "MISSING_BUSINESS_ID": "Invalid, missing business unit Id or must be an integer",
+          "MISSING_BUSINESS_CODE": "Invalid, missing business unit code",
+          "MISSING_BUSINESS_NAME": "Invalid, missing business unit name",
+          "MISSING_BRANCH": "Invalid, must have at least 1 Branch",
+          "MISSING_BRANCH_ID": "Invalid, missing branch Id or must be an integer",
+          "MISSING_BRANCH_CODE": "Invalid, missing branch code",
+          "MISSING_BRANCH_NAME": "Invalid, missing branch name",
+          "MISSING_LOCATION": "Invalid, must have at least 1 Loation",
+          "MISSING_LOCATION_ID": "Invalid, missing location Id or must be an integer",
+          "MISSING_LOCATION_CODE": "Invalid, missing location code",
+          "MISSING_LOCATION_NAME": "Invalid, missing location name",
+          "MUST_BE_GREATER_THAN_ZERO": "Invalid, location Id must be greater than zero"
+      },
+      "APPROVAL_LEVEL": {
+          "APPROVAL TOPIC_ID_EMPTY": "AprrovalTopicId cannot be empty",
+          "MUST_BE_NUMBER": "Invalid, AprrovalTopicId must be number",
+          "MUST_BE_GREATER_THAN_ZERO": "Invalid, ApprovalTopicId must be greater than zero",
+          "INVALID_APPROVALTOPIC_ID": "Invalid, the approval topic id value is invalid"
+      },
+      "NEW_USER": {
+          "MISSING_EMAIL_FORMAT": "“Please input valid email format”",
+          "EMAIL_NULL": "Invalid, request body missing email ",
+          "MUST_BE_NUMBER_ROLE_ID": "Invalid, roleId must be number",
+          "MISSING_EMAIL_AD": "Invalid, email not found in azure directory",
+          "MISSING_EMAIL": "Invalid, email not found",
+          "ALREADY_EXIST": "Invalid, email already exist"
+      }
+  },
+  "SUCCESS": {
+      "VALIDATE": "Succesfully validation"
+  }
+}

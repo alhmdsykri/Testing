@@ -1,0 +1,18 @@
+{
+  "preset": "ts-jest",
+  "coverageDirectory": "./coverage",
+  "collectCoverage": true,
+  "coverageReporters": [
+    "lcov"
+  ],
+  "collectCoverageFrom": [
+    "**/*.{ts,js}",
+    "!**/node_modules/**",
+    "!**/dist/**"
+  ],
+  "testMatch": [
+    "**/?(*.)+(spec).ts"
+  ],
+  "resetMocks": true,
+  "clearMocks": true
+}

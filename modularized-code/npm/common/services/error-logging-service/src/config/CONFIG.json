@@ -1,0 +1,5 @@
+﻿{
+	"APPLICATION_INSIGHTS": {
+		"ENVIRONMENT": "production"
+	}
+}

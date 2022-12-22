@@ -1,0 +1,41 @@
+{
+  "STATUS_CODE": {
+    "SUCCESS": {
+      "OK": 200
+    },
+    "WARNING": {
+      "WARN": 199
+    },
+    "CLIENT_ERROR": {
+      "BAD_REQUEST": 400,
+      "UNAUTHORIZED": 401,
+      "NOT_FOUND": 404,
+      "FORBIDDEN": 403
+    },
+    "SERVER_ERROR": {
+      "INTERNAL_SERVER_ERROR": 500
+    }
+  },
+  "PBAC": {
+    "TYPE": 1,
+    "DEFAULT": {
+      "ROW": 10,
+      "MAX_ROW": 50
+    }
+  },
+  "REDIS_CACHE": {
+    "RBAC": {
+      "USER_HASH_NAME": "user-rbac-permissions-userId"
+    },
+    "PBAC": {
+      "USER_HASH_NAME": "user-pbac-permissions-userId",
+      "USER_HASH_KEY": "userId-feature"
+    },
+    "DRBAC": {
+      "USER_HASH_KEY": "userDataRbac"
+    }
+  },
+  "EXTERNAL_API": {
+    "GET_PERSONAL_BY_ID": "https://driver-dev-astrafms-v2.sera.astra.co.id/api/driver/v1/driver/<personalDataId>"
+  }
+}

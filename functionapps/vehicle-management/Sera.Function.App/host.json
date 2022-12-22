@@ -1,0 +1,17 @@
+{
+  "extensions": {
+    "serviceBus": {
+      "maxMessageBatchSize": 1,
+      "prefetchCount": 1
+    }
+  },
+  "logging": {
+    "applicationInsights": {
+      "samplingSettings": {
+        "isEnabled": true,
+        "excludedTypes": "Request"
+      }
+    }
+  },
+  "version": "2.0"
+}

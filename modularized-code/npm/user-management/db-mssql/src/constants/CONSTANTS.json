@@ -1,0 +1,39 @@
+{
+  "ROLES": {
+    "DEFAULT": {
+      "ROW": 10,
+      "MAX_ROW": 50,
+      "ORDER_BY": "asc",
+      "SORT_BY": "name"
+    }
+  },
+  "PERMISSIONS": {
+    "DEFAULT": {
+      "ROW": 10,
+      "MAX_ROW": 50
+    }
+  },
+  "PBAC": {
+    "TYPE": 1,
+    "DEFAULT": {
+      "ROW": 10,
+      "MAX_ROW": 50
+    }
+  },
+  "RBAC": {
+    "TYPE": 0,
+    "DEFAULT": {
+      "ROW": 10,
+      "MAX_ROW": 50
+    }
+  },
+  "LOGIN": {
+    "MAX_LOGIN_ATTEMPT": 4
+  },
+  "STATUS_CODE": {
+    "SUCCESS": {
+      "OK": 200,
+      "ACCEPTED": 202
+    }
+  }
+}

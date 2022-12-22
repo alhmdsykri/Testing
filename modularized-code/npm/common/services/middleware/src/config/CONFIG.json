@@ -1,0 +1,6 @@
+{
+	"REDIS": {
+		"PORT": 6380,
+		"ENVIRONMENT": "production"
+	}
+}

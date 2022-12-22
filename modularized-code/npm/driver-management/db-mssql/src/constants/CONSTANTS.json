@@ -1,0 +1,61 @@
+{
+  "STATUS_CODE": {
+    "SUCCESS": {
+      "OK": 200,
+      "ACCEPTED": 202
+    },
+    "WARNING": {
+      "WARN": 199
+    },
+    "CLIENT_ERROR": {
+      "BAD_REQUEST": 400,
+      "UNAUTHORIZED": 401,
+      "NOT_FOUND": 404,
+      "FORBIDDEN": 403
+    },
+    "SERVER_ERROR": {
+      "INTERNAL_SERVER_ERROR": 500
+    }
+  },
+  "DRIVERS": {
+    "EMPLOYEE_STATUS": {
+      "ACTIVE": 1,
+      "TERMINATED": 5
+    },
+    "STATUS": {
+      "ACTIVE": 2,
+      "IN_PROGRESS": 1,
+      "DELETED": 0
+    },
+    "DEFAULT": {
+      "ROW": 10,
+      "MAX_ROW": 50,
+      "ROW_FAMILY": 5,
+      "ROW_TRAINING": 6
+    },
+    "OVERVIEW_CONTRACT_STATUS": {
+      "ACTIVE": 1,
+      "WILL_BE_EXPIRED": 2,
+      "PENDING_PLACEMENT": 3,
+      "ALL": 4
+    },
+    "CONTRACT_STATUS": {
+      "NOT_STARTED": 1,
+      "ACTIVE": 2,
+      "EXPIRY_ON": 3,
+      "EXPIRED": 4
+    },
+    "MCU": {
+      "NOT_STARTED": 1,
+      "ACTIVE": 2,
+      "EXPIRY_ON": 3,
+      "EXPIRED": 4
+    },
+    "IDENTITY": {
+      "NOT_STARTED": 1,
+      "ACTIVE": 2,
+      "EXPIRY_ON": 3,
+      "EXPIRED": 4
+    }
+  }
+}

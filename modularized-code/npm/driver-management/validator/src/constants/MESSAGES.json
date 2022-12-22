@@ -1,0 +1,172 @@
+{
+  "ERROR": {
+    "RESOURCE": {
+      "UNAVAILABLE": "Resource not found",
+      "TRANSACTIONID": "Invalid, request header missing transactionId",
+      "USERID": "Invalid, request header missing userId",
+      "USERID_MUST_BE_NUMBER": "Invalid, request header userId must be number",
+      "APPID_REQUIRED": "Invalid, appId must have a number value",
+      "APPID_MUST_BE_NUMBER": "Invalid, appId must be number",
+      "APPID_MUST_BE_GREATER_THAN_ZERO": "Invalid, appId must be greater than zero"
+    },
+    "DEFAULT": {
+      "UNEXPECTED": "Internal Server Error",
+      "DATABASE_ERROR": "There is an error in DB, Please contact IT support.",
+      "INTERNAL_API_ERROR": "There is an error in application integration, Please contact IT support."
+    },
+    "PAGINATION": {
+      "PAGE": {
+        "MISSING": "Invalid, missing page",
+        "MUST_BE_NUMBER": "Invalid, page must be number",
+        "MUST_BE_GREATER_THAN_ZERO": "Invalid, page must be greater than zero"
+      },
+      "ROW": {
+        "MISSING": "Invalid, missing row",
+        "MUST_BE_NUMBER": "Invalid, row must be number",
+        "MUST_BE_GREATER_THAN_ZERO": "Invalid, row must be greater than zero"
+      }
+    },
+    "DRIVER": {
+      "LIST_ACTIVE": {
+        "MISSING_BUSINESS_UNIT_ID": "Invalid, missing business unit ID",
+        "MISSING_STATUS_CONTRACT_ID": "Invalid, missing status contract ID"
+      },
+      "DETAIL": {
+        "MISSING_PERSONAL_DATA_ID": "Invalid, missing personal data ID",
+        "NOT_FOUND": "Invalid, driver not found",
+        "NOT_ACCESS": "Invalid, driver is not on branch assignment and company assignment on your rbac data",
+        "NOT_PLACEMENT": "Invalid, driver has no placement branch or pool"
+      },
+      "GENERAL": {
+        "MISSING": "Invalid, request body missing general information card",
+        "MISSING_KEY_PHOTOFRONT": "Invalid, request body missing front side (string)",
+        "MISSING_KEY_PHOTORIGHT": "Invalid, request body missing right side (string)",
+        "MISSING_KEY_PHOTOLEFT": "Invalid, request body missing lift side (string)",
+        "MISSING_KEY_FULLNAME": "Invalid, request body missing fullname (string)",
+        "MISSING_KEY_PERSONAL_ID": "Invalid, request body missing personal id (number)",
+        "ALREADY_EXIST_PERSONAL_ID": "Invalid, personal id already exist",
+        "MISSING_KEY_COMPANY_ID": "Invalid, request body missing company id (number)",
+        "MISSING_KEY_PERSONNEL_AREA_ID": "Invalid, request body missing personnel sub area id (number)",
+        "PERSONNEL_AREA_ID_NOT_FOUND": "Invalid, personnel area id not found (number)",
+        "MISSING_KEY_CICO_POOL": "Invalid, request body missing cico pool (number)",
+        "DUPLICATING_CICO_POOL": "Invalid, cico pool id duplicated",
+        "MUST_BE_NUMBER_CICO_POOL": "Invalid, cico pool id must be number"
+      },
+      "PROFFESIONAL": {
+        "MISSING": "Invalid, request body missing professional background card",
+        "MISSING_KEY_BUSINESS_UNIT_ID": "Invalid, request body missing business unit id (number)",
+        "MISSING_KEY_BRANCH_ID": "Invalid, request body missing branch id (number)",
+        "MISSING_KEY_POOL_ID": "Invalid, request body missing pool id (number)",
+        "MISSING_KEY_CUSTOMER_ID": "Invalid, request body missing customer id (number)",
+        "MISSING_KEY_CICO_POOL_ID": "Invalid, request body missing cico pool id (number)",
+        "MISSING_KEY_CUSTOMER_POSITION": "Invalid, request body missing customer position id (number)",
+        "MISSING_KEY_CONTRACT_TYPE_CODE": "Invalid, request body missing contract type code (string)",
+        "NOT_FOUND_CONTRACT_TYPE_CODE": "Invalid, contract type code not found",
+        "MISSING_KEY_CONTRACT_START": "Invalid, request body missing contract start",
+        "REGEX_KEY_CONTRACT_START": "Invalid, contract start isn't in the format date (yyyy-mm-dd)",
+        "MISSING_KEY_CONTRACT_END": "Invalid, request body missing contract end",
+        "REGEX_KEY_CONTRACT_END": "Invalid, contract end isn't in the format date (yyyy-mm-dd)",
+        "INVALID_CONTRACT_END": "Invalid, contract end date must be greater than contract start date",
+        "MISSING_KEY_JOINED_DATE": "Invalid, request body missing joined date",
+        "REGEX_KEY_JOINED_DATE": "Invalid, joined date isn't in the format date (yyyy-mm-dd)",
+        "INVALID_JOINED_DATE": "Invalid, joined date must be greater than current date",
+        "MISSING_KEY_BANK_ID": "Invalid, request body missing bank id (number)",
+        "NOT_FOUND_BANK_ID": "Invalid, bank id not found",
+        "MISSING_KEY_BANK_ACCOUNT_NUMBER": "Invalid, request body missing bank account number (string)",
+        "MISSING_KEY_BANK_ACCOUNT_HOLDER_NAME": "Invalid, request body missing bank account holder name (string)",
+        "MISSING_KEY_PHONE_NUMBER": "Invalid, request body missing phone number",
+        "REGEX_KEY_PHONE_NUMBER": "Invalid, phone number isn't in the format indonesian phone number (+62xxxxxx)",
+        "MISSING_KEY_EMAIL": "Invalid, request body missing email",
+        "REGEX_KEY_EMAIL": "Invalid, email isn't in the format email"
+      },
+      "EDIT_DRIVER": {
+        "EMPLOYMENT": {
+          "MISSING_PERSONAL_CONTRACT_ID": "Invalid, missing personal contract Id",
+          "MISSING_KEY_CONTRACT_TYPE_CODE": "Invalid, request body missing contract type code ",
+          "MISSING_KEY_CONTRACT_START": "Invalid, request body missing contract Start",
+          "MISSING_KEY_CONTRACT_END": "Invalid, request body missing contract end",
+          "MISSING_KEY_JOINED_DATE": "Invalid, request body missing join date",
+          "MISSING_KEY_BANK_ID": "Invalid, request body missing bank id",
+          "MISSING_KEY_BANK_ACCOUNT_NUMBER": "Invalid, request body missing bank account number",
+          "MISSING_KEY_BANK_ACCOUNT_NAME": "Invalid, request body missing bank account name"
+        },
+        "CONTACT": {
+          "MISSING_PHONE_NUMBER": "Invalid, request body missing phone number",
+          "MISSING_EMAIL": "Invalid, request body missing email",
+          "REGEX_KEY_EMAIL": "Invalid, email isn't in the format email"
+        },
+        "READY_MODIFY": {
+          "DRIVER_NOT_FOUND": "Invalid, transaction id or driver not found"
+        }
+      },
+      "PERSONAL": {
+        "MISSING": "Invalid, request body missing personal information card",
+        "MISSING_KEY_GENDER_ID": "Invalid, request body missing gender id (number)",
+        "NOT_FOUND_GENDER_ID": "Invalid, gender id not found",
+        "MISSING_KEY_NATIONALITY_ID": "Invalid, request body missing nationality id (number)",
+        "NOT_FOUND_NATIONALITY_ID": "Invalid, nationality id not found",
+        "MISSING_KEY_PLACE_OF_BIRTH": "Invalid, request body missing place of birth",
+        "MISSING_KEY_DATE_OF_BIRTH": "Invalid, request body missing date of birth",
+        "REGEX_KEY_DATE_OF_BIRTH": "Invalid, date of birth isn't in the format date (yyyy-mm-dd)",
+        "INVALID_DATE_OF_BIRTH": "Invalid, date of birth must be greater than current date",
+        "MISSING_KEY_MARITAL_STATUS_ID": "Invalid, request body missing marital status id (number)",
+        "NOT_FOUND_MARITAL_STATUS_ID": "Invalid, marital status id not found",
+        "MISSING_KEY_MARITAL_DATE": "Invalid, request body missing marital date",
+        "REGEX_KEY_MARITAL_DATE": "Invalid, marital date isn't in the format date (yyyy-mm-dd)",
+        "MISSING_KEY_RELIGION": "Invalid, request body missing religion id (number)",
+        "NOT_FOUND_RELIGION_ID": "Invalid, religion id not found",
+        "MISSING_KEY_HEIGHT": "Invalid, request body missing height (number)",
+        "MISSING_KEY_WEIGHT": "Invalid, request body missing weight (number)",
+        "MISSING_KEY_BLOOD_TYPE": "Invalid, request body missing blood type (string)",
+        "MISSING_KEY_SHOES_SIZE": "Invalid, request body missing shoes size (string)",
+        "MISSING_KEY_PANTS_SIZE": "Invalid, request body missing pants size (string)",
+        "MISSING_KEY_UNINORM_SIZE": "Invalid, request body missing uniform size (string)"
+      },
+      "DOCUMENT": {
+        "MISSING": "Invalid, request body missing document card",
+        "MISSING_KEY_IDENTITY_TYPE": "Invalid, request body missing identity type id (number)",
+        "DUPLICATING_IDENTITY_TYPE": "Invalid, identity type id duplicated",
+        "NOT_FOUND_IDENTITY_TYPE": "Invalid, identity type id not found",
+        "MISSING_KEY_IDENTITY_NUMBER": "Invalid, request body missing identity number (string)",
+        "MISSING_KEY_EXPIRATION_DATE": "Invalid, request body missing expiration date",
+        "REGEX_KEY_EXPIRATION_DATE": "Invalid, expiration date isn't in the format date (yyyy-mm-dd)",
+        "MISSING_KEY_IDENTITY_ATTACHMENT": "Invalid, request body missing identity attachment (string)"
+      },
+      "PLACEMENT": {
+        "MISSING_PERSONAL_DATA_ID": "Invalid, missing personal data ID",
+        "NOT_FOUND": "Invalid, driver not found",
+        "MISSING_KEY_FRONTSIDE": "Invalid, request body missing front side",
+        "MISSING_KEY_RIGHTSIDE": "Invalid, request body missing right side",
+        "MISSING_KEY_LIFTSIDE": "Invalid, request body missing lift side",
+        "MISSING_KEY_BRANCH_ID": "Invalid, request body missing branch id",
+        "MISSING_KEY_POOL_ID": "Invalid, request body missing pool id",
+        "MISSING_KEY_CUSTOMER_ID": "Invalid, request body missing customer id",
+        "MISSING_KEY_BUSINESS_UNIT_ID": "Invalid, request body missing business Unit Id",
+        "MISSING_KEY_CICO_POOL_ID": "Invalid, request body missing cico pool Id",
+        "MISSING_KEY_CUSTOMER_POSITION": "Invalid, request body missing customer Position Id",
+        "DUPLICATING_CICO_POOL": "Invalid, cico pool id duplicated",
+        "MUST_BE_NUMBER_CICO_POOL": "Invalid, cico pool id must be number",
+        "POOL_ID_NOT_FOUND": "Invalid, pool id not found",
+        "COMPANY_ID_NOT_FOUND": "Invalid, company id not found",
+        "BRANCH_ID_NOT_FOUND": "Invalid, branch id not found",
+        "BU_ID_NOT_FOUND": "Invalid, businnes Unit id not found",
+        "CICO_POOL_ID_NOT_FOUND": "Invalid, cico pool id not found",
+        "CUSTOMER_ID_NOT_FOUND": "Invalid, customer id not found"
+      },
+      "COUNTRY": {
+        "NOT_FOUND": "Invalid, countryId not found",
+        "MISSING_COUNTRY_BY_ID": "Invalid, missing countryId"
+      },
+      "CITY": {
+        "NOT_FOUND": "Invalid, cityId not found",
+        "MISSING_CITY_BY_ID": "Invalid, missing cityId"
+      },
+      "LOCATION": {
+        "MISSING_LOCATION_ID": "Invalid, missing lcoation ID"
+      }
+    }
+  },
+  "SUCCESS": {
+    "VALIDATE": "Succesfully validation"
+  }
+}

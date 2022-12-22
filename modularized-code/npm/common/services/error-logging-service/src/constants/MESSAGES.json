@@ -1,0 +1,10 @@
+{
+  "ERROR": {
+    "RESOURCE": {
+      "UNAVAILABLE": "Resource not found"
+    },
+    "DEFAULT": {
+      "UNEXPECTED": "Internal Server Error"
+    }
+  }
+}

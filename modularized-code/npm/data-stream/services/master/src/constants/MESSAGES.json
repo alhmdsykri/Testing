@@ -1,0 +1,15 @@
+{
+  "ERROR": {
+      "MISSING_EMAIL_FORMAT": "Please input valid email format"
+  },
+  "SUCCESS": {
+    "SYNC": {
+      "UPDATE_ROLE_POSITION": {
+        "LOCATION": "Location successfully updated",
+        "BRANCH": "Branch successfully updated",
+        "BU": "Business unit successfully updated",
+        "COMPANY": "Company successfully updated"
+      }
+    }
+  }
+}

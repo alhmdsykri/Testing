@@ -1,0 +1,8 @@
+{
+	"DEFAULT": {
+		"UNEXPECTED": "Internal Server Error",
+		"DATABASE_ERROR": "There is an error in DB, Please contact IT support.",
+		"UNAUTHORIZED_USER": "Unauthorized user attempting to access resources",
+		"MISSING_USER_ID": "Invalid, Missing userId in the headers"
+	}
+}

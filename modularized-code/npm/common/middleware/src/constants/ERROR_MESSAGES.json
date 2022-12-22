@@ -1,0 +1,13 @@
+{
+	"DEFAULT": {
+		"UNEXPECTED": "Internal Server Error",
+		"DATABASE_ERROR": "There is an error in DB, Please contact IT support.",
+		"UNAUTHORIZED_USER": "Unauthorized user attempting to access resources",
+		"MISSING_USER_ID": "Invalid, Missing userId in the headers"
+	},
+	"RESOURCE": {
+		"TRANSACTIONID": "Invalid, request header missing transactionId",
+		"USERID": "Invalid, request header missing userId",
+		"USERID_MUST_BE_NUMBER": "Invalid, request header userId must be number"
+	}
+}

@@ -1,0 +1,23 @@
+{
+  "ERROR": {
+    "RESOURCE": {
+      "UNAVAILABLE": "Resource not found"
+    },
+    "DEFAULT": {
+      "UNEXPECTED": "Internal Server Error",
+      "DATABASE_ERROR": "There is an error in DB, Please contact IT support.",
+      "INTERNAL_API_ERROR": "There is an error in application integration, Please contact IT support."
+    },
+    "DRIVER": {
+      "NOT_FOUND": "Driver not found",
+      "DRIVER_ID_NOT_UNIQUE": "DriverId already exisit"
+    },
+    "VEHICLE": {
+      "NOT_FOUND": "Vehicle not found"
+    }
+  },
+  "SUCCESS": {
+    "CREATE": "Succesfully writed"
+  }
+
+}

@@ -1,0 +1,51 @@
+{
+  "STATUS_CODE": {
+    "SUCCESS": {
+      "OK": 200
+    },
+    "WARNING": {
+      "WARN": 199
+    },
+    "CLIENT_ERROR": {
+      "BAD_REQUEST": 400,
+      "UNAUTHORIZED": 401,
+      "NOT_FOUND": 404,
+      "FORBIDDEN": 403
+    },
+    "SERVER_ERROR": {
+      "INTERNAL_SERVER_ERROR": 500
+    }
+  },
+  "PBAC": {
+    "TYPE": 1,
+    "DEFAULT": {
+      "ROW": 10,
+      "MAX_ROW": 50
+    }
+  },
+  "REDIS_CACHE": {
+    "RBAC": {
+      "USER_HASH_NAME": "user-rbac-permissions-userId"
+    },
+    "PBAC": {
+      "USER_HASH_NAME": "user-pbac-permissions-userId",
+      "USER_HASH_KEY": "userId-feature"
+    },
+    "DRBAC": {
+      "USER_HASH_KEY": "userDataRbac"
+    }
+  },
+  "EXTERNAL_API": {
+    "PR_DATA_RBAC": "/api/user/v1/data-rbac/:userId",
+    "PR_RBAC_PERMISSIONS": "/api/user/v1/rbac-role-permissions/:userId",
+    "MIDDLEWARE_GETUSERID": "/api/user/v1/user-id",
+    "MS_IDENTITY_PLATFORM": {
+      "LOGIN_URL": "https://login.microsoftonline.com/<tenantId>/oauth2/v2.0/token",
+      "GET_EMAIL_URL": "https://graph.microsoft.com/v1.0/users/<email>",
+      "ROLE_ENTERPRISE_URL": "https://graph.microsoft.com/v1.0/users/<email>/appRoleAssignments",
+      "RESOURCE_GRAPH": "https://graph.microsoft.com/",
+      "LOGIN_AD_URL": "https://login.microsoftonline.com/<tenantId>/oauth2/token",
+      "DELETE_ROLE_ENTERPRISE": "https://graph.microsoft.com/v1.0/users/<email>/appRoleAssignments/<idRoleAssignment>"
+    }
+  }
+}

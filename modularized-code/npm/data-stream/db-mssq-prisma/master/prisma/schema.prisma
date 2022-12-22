@@ -1,0 +1,288 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+//-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=--=
+// 
+// NOTE: EVERY CHANGES ON THIS FILE YOU NEED TO RUN
+// $> npx prisma generate
+// $> npm run build
+//
+//-=-=-=-=-=-=-=--=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=--=
+
+generator client {
+  provider        = "prisma-client-js"
+  previewFeatures = ["interactiveTransactions", "fieldReference"]
+}
+
+datasource db {
+  provider = "sqlserver"
+  url      = env("MSSQL_DATABASE_CONNECTION_STRING")
+}
+
+model Material {
+  materialId         Int            @id @default(autoincrement())
+  serviceTypeId      Int?
+  productId          Int?
+  UOMCode            String?        @db.VarChar(50)
+  materialCode       String         @db.VarChar(50)
+  materialName       String         @db.VarChar(100)
+  vehicleTypeId      Int
+  vehicleTypeCode    String         @db.VarChar(5)
+  vehicleTypeName    String         @db.VarChar(50)
+  rentalDuration     Int
+  rentalDurationType String         @db.VarChar(10)
+  isSLITrucking      Int
+  businessUnitId     Int?
+  businessUnitCode   String?        @db.VarChar(4)
+  businessUnitName   String?        @db.VarChar(100)
+  transactionId      String?        @db.VarChar(100)
+  dataStoreTime      DateTime?
+  sapMssqlSinkTime   DateTime?
+  persistedDate      DateTime?
+  status             Int
+  uniqueKey          String         @db.VarChar(100)
+  version            Int
+  createdBy          Int
+  createdAt          DateTime
+  modifiedBy         Int?
+  modifiedAt         DateTime?
+  createdAtSap       DateTime?
+  modifiedAtSap      DateTime?
+  materialItem       MaterialItem[]
+
+  @@unique([materialCode])
+}
+
+model MaterialItem {
+  materialItemId   Int       @id @default(autoincrement())
+  transactionId    String?   @db.VarChar(100)
+  materialId       Int
+  branchId         Int
+  businessUnitId   Int
+  businessUnitCode String?   @db.VarChar(4)
+  businessUnitName String?   @db.VarChar(100)
+  version          Int
+  createdBy        Int
+  createdAt        DateTime
+  modifiedBy       Int?
+  modifiedAt       DateTime?
+  createdAtSap     DateTime?
+  modifiedAtSap    DateTime?
+  persistedDate    DateTime?
+  dataStoreTime    DateTime?
+  sapMssqlSinkTime DateTime?
+  material         Material? @relation(fields: [materialId], references: [materialId])
+
+  @@unique([materialId, businessUnitId])
+}
+
+model Customer {
+  customerId           Int                    @id @default(autoincrement())
+  customerCode         String                 @db.VarChar(50)
+  customerName         String                 @db.VarChar(255)
+  customerAddress      String                 @db.VarChar(1000)
+  accountGroupSAP      String                 @db.VarChar(50)
+  isBlocked            Int?                   @default(0)
+  isB2B                Int                    @default(1)
+  customerLogo         String?                @db.VarChar(255)
+  status               Int
+  uniqueKey            String?                @db.VarChar(100)
+  version              Int
+  createdBy            Int
+  createdAt            DateTime
+  modifiedBy           Int?
+  modifiedAt           DateTime?
+  createdAtSap         DateTime?
+  modifiedAtSap        DateTime?
+  transactionId        String?                @db.VarChar(255)
+  persistedDate        DateTime?
+  dataStoreTime        DateTime?
+  sapMssqlSinkTime     DateTime?
+  customerBusinessUnit CustomerBusinessUnit[]
+  customerContact      CustomerContact[]
+  customerContract     CustomerContract[]
+
+  @@unique([customerCode])
+}
+
+model CustomerBusinessUnit {
+  customerBusinessUnit Int       @id @default(autoincrement())
+  customerId           Int
+  businessUnitId       Int
+  status               Int
+  uniqueKey            String?   @db.VarChar(100)
+  version              Int
+  createdBy            Int
+  createdAt            DateTime
+  modifiedBy           Int?
+  modifiedAt           DateTime?
+  createdAtSap         DateTime?
+  modifiedAtSap        DateTime?
+  transactionId        String?   @db.VarChar(255)
+  persistedDate        DateTime?
+  dataStoreTime        DateTime?
+  sapMssqlSinkTime     DateTime?
+  customer             Customer? @relation(fields: [customerId], references: [customerId])
+
+  @@unique([customerId, businessUnitId])
+}
+
+model CustomerContact {
+  customerContactId   Int       @id @default(autoincrement())
+  customerId          Int
+  customerContactCode String?   @db.VarChar(50)
+  contactName         String    @db.VarChar(100)
+  phoneNumber         String    @db.VarChar(20)
+  mobilePhone         String?   @db.VarChar(20)
+  email               String    @db.VarChar(50)
+  position            String?   @db.VarChar(50)
+  department          String?   @db.VarChar(50)
+  remarks             String?   @db.VarChar(150)
+  isPIC               Int       @default(0)
+  function            String?   @db.VarChar(100)
+  status              Int
+  version             Int
+  createdBy           Int
+  createdAt           DateTime
+  modifiedBy          Int?
+  modifiedAt          DateTime?
+  createdAtSap        DateTime?
+  modifiedAtSap       DateTime?
+  transactionId       String?   @db.VarChar(100)
+  persistedDate       DateTime?
+  dataStoreTime       DateTime?
+  sapMssqlSinkTime    DateTime?
+  customer            Customer? @relation(fields: [customerId], references: [customerId])
+
+  @@unique([customerId, customerContactCode])
+}
+
+model Vendor {
+  vendorId           Int                  @id @default(autoincrement())
+  vendorName         String               @db.VarChar(150)
+  vendorCode         String               @db.VarChar(20)
+  isBlocked          String?              @db.VarChar(100)
+  status             Int
+  uniqueKey          String?              @db.VarChar(100)
+  version            Int
+  createdBy          Int
+  createdAt          DateTime?
+  modifiedBy         Int?
+  modifiedAt         DateTime?
+  createdAtSap       DateTime?
+  modifiedAtSap      DateTime?
+  transactionId      String?              @db.VarChar(255)
+  persistedDate      DateTime?
+  dataStoreTime      DateTime?
+  sapMssqlSinkTime   DateTime?
+  vendorBusinessUnit VendorBusinessUnit[]
+
+  @@unique([vendorCode])
+}
+
+model VendorBusinessUnit {
+  vendorBusinessUnitId Int       @id @default(autoincrement())
+  vendorId             Int
+  businessUnitId       Int
+  businessUnitCode     String?   @db.VarChar(4)
+  isBlocked            Int
+  status               Int?
+  version              Int?
+  createdBy            Int?
+  createdAt            DateTime?
+  modifiedBy           Int?
+  modifiedAt           DateTime?
+  createdAtSap         DateTime?
+  modifiedAtSap        DateTime?
+  transactionId        String?   @db.VarChar(255)
+  persistedDate        DateTime?
+  dataStoreTime        DateTime?
+  sapMssqlSinkTime     DateTime?
+  Vendor               Vendor?   @relation(fields: [vendorId], references: [vendorId])
+
+  @@unique([businessUnitId, vendorId])
+}
+
+model CustomerContract {
+  customerContractId     Int                    @id @default(autoincrement())
+  contractNumber         String                 @db.VarChar(15)
+  parentContractId       Int?
+  companyId              Int?
+  companyCode            String?                @db.VarChar(4)
+  companyName            String?                @db.VarChar(100)
+  businessUnitId         Int
+  businessUnitCode       String                 @db.VarChar(4)
+  businessUnitName       String                 @db.VarChar(100)
+  customerId             Int
+  startDate              DateTime               @db.Date
+  endDate                DateTime               @db.Date
+  customerContractStatus Int
+  remainingKm            Float?
+  remainingTonnage       Float?
+  remainingTrip          Float?
+  isProject              Int
+  isMonthly              Int
+  isTMS                  Int
+  isOvercharge           Int
+  status                 Int
+  uniqueKey              String?                @db.VarChar(100)
+  version                Int
+  createdBy              Int
+  createdAt              DateTime
+  modifiedBy             Int?
+  modifiedAt             DateTime?
+  createdAtSap           DateTime?
+  modifiedAtSap          DateTime?
+  transactionId          String?                @db.VarChar(100)
+  persistedDate          DateTime?
+  dataStoreTime          DateTime?
+  sapMssqlSinkTime       DateTime?
+  customerContractItem   CustomerContractItem[]
+  customer               Customer?              @relation(fields: [customerId], references: [customerId])
+
+  @@unique([contractNumber])
+}
+
+model CustomerContractItem {
+  customerContractItemId Int               @id @default(autoincrement())
+  customerContractId     Int
+  materialId             Int
+  UOMCode                String            @db.VarChar(10)
+  branchId               Int
+  branchCode             String?           @db.VarChar(4)
+  branchName             String?           @db.VarChar(100)
+  lineItemNumber         Int
+  quantity               Int
+  numberOfDriver         Int
+  helperIncluded         String?           @db.VarChar(10)
+  reportIncluded         String?           @db.VarChar(10)
+  UJPIncluded            String?           @db.VarChar(10)
+  fuel                   String?           @db.VarChar(10)
+  channelType            String?           @db.VarChar(10)
+  tollAndParking         String?           @db.VarChar(10)
+  driverOrRider          String?           @db.VarChar(10)
+  crew                   String?           @db.VarChar(10)
+  coverageArea           String?           @db.VarChar(10)
+  startDate              DateTime
+  endDate                DateTime
+  isDedicated            Int
+  isWithDriver           Int
+  isActive               Int
+  isNational             Int?
+  status                 Int
+  uniqueKey              String?           @db.VarChar(100)
+  version                Int
+  createdBy              Int
+  createdAt              DateTime
+  modifiedBy             Int?
+  modifiedAt             DateTime?
+  createdAtSap           DateTime?
+  modifiedAtSap          DateTime?
+  transactionId          String?           @db.VarChar(100)
+  persistedDate          DateTime?
+  dataStoreTime          DateTime?
+  sapMssqlSinkTime       DateTime?
+  customerContract       CustomerContract? @relation(fields: [customerContractId], references: [customerContractId])
+
+  @@unique([lineItemNumber, customerContractId])
+}

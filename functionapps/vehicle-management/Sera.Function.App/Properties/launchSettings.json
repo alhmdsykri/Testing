@@ -1,0 +1,9 @@
+{
+  "profiles": {
+    "Sera.Function.App": {
+      "commandName": "Project",
+      "commandLineArgs": "--port 7056",
+      "launchBrowser": false
+    }
+  }
+}

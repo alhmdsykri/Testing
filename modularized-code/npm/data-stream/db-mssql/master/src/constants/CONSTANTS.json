@@ -1,0 +1,28 @@
+{
+  "DELTA_SINK": {
+    "ENTITY": {
+      "CUSTOMER": "customer",
+      "CUSTOMER_BUSINESS_UNIT": "customerBusinessUnit",
+      "CUSTOMER_CONTACT": "customerContact",
+      "VENDOR": "vendor",
+      "VENDOR_BUSINESS_UNIT": "vendorBusinessUnit",
+      "MATERIAL": "material",
+      "MATERIAL_ITEM": "materialItem",
+      "CUSTOMER_CONTRACT": "customerContract",
+      "CUSTOMER_CONTRACT_ITEM": "customerContractItem"
+    },
+    "ACTION": {
+      "CUSTOMER": "CUSTOMER",
+      "CUSTOMER_BUSINESS_UNIT": "CUSTOMERBUSINESSUNIT",
+      "CUSTOMER_CONTACT": "CUSTOMERCONTACT",
+      "VENDOR": "VENDOR",
+      "VENDOR_BUSINESS_UNIT": "VENDOR_BUSINESSUNIT",
+      "MATERIAL": "MATERIAL",
+      "MATERIAL_ITEM": "MATERIALITEM",
+      "CUSTOMER_CONTRACT": "CUSTOMERCONTRACT",
+      "CUSTOMER_CONTRACT_ITEM": "CUSTOMERCONTRACTITEM"
+    },
+    "STATUS": 2
+  }
+  
+}

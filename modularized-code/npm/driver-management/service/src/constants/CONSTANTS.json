@@ -1,0 +1,46 @@
+{
+  "STATUS_CODE": {
+    "SUCCESS": {
+      "OK": 200
+    },
+    "WARNING": {
+      "WARN": 199
+    },
+    "CLIENT_ERROR": {
+      "BAD_REQUEST": 400,
+      "UNAUTHORIZED": 401,
+      "NOT_FOUND": 404,
+      "FORBIDDEN": 403
+    },
+    "SERVER_ERROR": {
+      "INTERNAL_SERVER_ERROR": 500
+    }
+  },
+  "PBAC": {
+    "TYPE": 1,
+    "DEFAULT": {
+      "ROW": 10,
+      "MAX_ROW": 50
+    }
+  },
+  "REDIS_CACHE": {
+    "RBAC": {
+      "USER_HASH_NAME": "user-rbac-permissions-userId"
+    },
+    "PBAC": {
+      "USER_HASH_NAME": "user-pbac-permissions-userId",
+      "USER_HASH_KEY": "userId-feature"
+    },
+    "DRBAC": {
+      "USER_HASH_KEY": "userDataRbac"
+    }
+  },
+  "EXTERNAL_API": {
+    "GET_COMPANY_BY_ID": "https://organization-dev-astrafms-v2.sera.astra.co.id/v1/company/<companyId>",
+    "GET_BRANCH_BY_ID": "https://organization-dev-astrafms-v2.sera.astra.co.id/v1/branch/<branchId>",
+    "GET_BU_BY_ID": "https://organization-dev-astrafms-v2.sera.astra.co.id/v1/businessunit/<BUId>",
+    "GET_POOL_BY_LOC_ID": "https://master-dev-astrafms-v2.sera.astra.co.id/v1/location/check/?locationTypeCode=LTID-006&locationId=<locId>",
+    "GET_CICO_POOL_BY_LOC_ID": "https://master-dev-astrafms-v2.sera.astra.co.id/v1/location/check/?locationTypeCode=LTID-001<locId>",
+    "GET_CUSTOMER_BY_ID": "https://master-dev-astrafms-v2.sera.astra.co.id/v1/customer/<customerId>"
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "ERROR": {
+    "RESOURCE": {
+      "UNAVAILABLE": "Resource not found",
+      "TRANSACTIONID": "Invalid, request header missing transactionId",
+      "USERID": "Invalid, request header missing userId",
+      "USERID_MUST_BE_NUMBER": "Invalid, request header userId must be number",
+      "APPID_REQUIRED": "Invalid, appId must have a number value",
+      "APPID_MUST_BE_NUMBER": "Invalid, appId must be number",
+      "APPID_MUST_BE_GREATER_THAN_ZERO": "Invalid, appId must be greater than zero"
+    },
+    "DEFAULT": {
+      "UNEXPECTED": "Internal Server Error",
+      "DATABASE_ERROR": "There is an error in DB, Please contact IT support",
+      "INTERNAL_API_ERROR": "There is an error in application integration, Please contact IT support"
+    },
+    "PAGINATION": {
+      "PAGE": {
+        "MISSING": "Invalid, missing page",
+        "MUST_BE_NUMBER": "Invalid, page must be number",
+        "MUST_BE_GREATER_THAN_ZERO": "Invalid, page must be greater than zero"
+      },
+      "ROW": {
+        "MISSING": "Invalid, missing row",
+        "MUST_BE_NUMBER": "Invalid, row must be number",
+        "MUST_BE_GREATER_THAN_ZERO": "Invalid, row must be greater than zero"
+      }
+    },
+    "ATTENDANCE": {
+      "FATIGUE_QUESTION": {
+        "NUMBER_OF_SELF_CONDITION": "Invalid, number of self condition must be number greater than zero",
+        "NUMBER_OF_KNOWLEDGE": "Invalid, number of knowledge must be number greater than zero",
+        "NUMBER_OF_DECLARATION": "Invalid, number of declaration must be number greater than zero"
+      },
+      "SUBMIT_FATIGUE_QUESTION": {
+        "PERSONAL_DATA_ID": "Invalid, personal data id must be number greater than zero",
+        "INTERVIEW_TIMESTAMP": "Invalid, format interview timestamp",
+        "TOTAL_SCORE": "Invalid, total score must be number",
+        "MIN_SCORE": "Invalid, minimum score must be number",
+        "IS_PASSED": "Invalid, is passed must be true or false",
+        "FATIGUE_STATUS_ID": "Invalid, fatigue status id must be number",
+        "FATIGUE_STATUS_ID_NUMBER": "Invalid, fatigue status id must 1, 2 or 3",
+        "PERSONAL_DATA_ID_NOT_FOUND": "Invalid, personal data id not found",
+        "SUBMITTED": "Failed, you already submitted fatigue today"
+      }
+    }
+  },
+  "SUCCESS": {
+    "VALIDATE": "Successfully validation"
+  }
+}

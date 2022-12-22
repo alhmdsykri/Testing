@@ -1,0 +1,74 @@
+{
+  "ERROR": {
+    "NEW_USER": {
+      "MISSING_EMAIL_FORMAT": "“Please input valid email format”",
+      "EMAIL_NULL": "Invalid, request body missing email ",
+      "MUST_BE_NUMBER_ROLE_ID": "Invalid, roleId must be number",
+      "MISSING_EMAIL_AD": "Invalid, email not found in azure directory",
+      "MISSING_EMAIL": "Invalid, email not found",
+      "ALREADY_EXIST": "Invalid, email already exist in entreprise application FMS2.0-SP ",
+      "EMAIL_NOT_FOUND": "Invalid, email not found  in entreprise application"
+    },
+    "RESOURCE": {
+      "UNAVAILABLE": "Resource not found",
+      "APP_ROLE_NOT_FOUND": "You don't have Enterprise Role to access this resource",
+      "APP_ROLE_NOT_ALLOWED": "You don't have permission to access this resource"
+    },
+    "DEFAULT": {
+      "UNEXPECTED": "Internal Server Error",
+      "DATABASE_ERROR": "There is an error in DB, Please contact IT support.",
+      "INTERNAL_API_ERROR": "There is an error in application integration, Please contact IT support.",
+      "ACCESS_TOKEN_NOT_FOUND": "MS Error: access_token not found"
+    },
+    "DRIVER": {
+      "NOT_FOUND": "Driver not found",
+      "DRIVER_ID_NOT_UNIQUE": "DriverId already exisit"
+    },
+    "VEHICLE": {
+      "NOT_FOUND": "Vehicle not found"
+    },
+    "LOGIN": {
+      "INVALUD_USER_PASS": "Invalid username or password.",
+      "USER_SUSPENDED": "Your user is suspended, please contact the FMS helpdesk"
+    },
+    "REFRESH_TOKEN": {
+      "BAD_REQUEST": "Invalid request. Request is malformed or invalid"
+    }
+  },
+  "SUCCESS": {
+    "CREATE_DRIVER": "Driver successfully added",
+    "UPDATE_DRIVER": "Driver successfully updated",
+    "DELETE_DRIVER": "Driver successfully deleted",
+    "CREATE_DRIVER_ROUTE": "Vehicle with Driver successfully added",
+    "UPDATE_DRIVER_ROUTE": "Vehicle successfully updated",
+    "DELETE_DRIVER_ROUTE": "Vehicle and Driver successfully deleted",
+    "CREATE_ROLE": "Role successfully persisted",
+    "UPDATE_USER": "User successfully updated",
+    "UPDATE_STATUS_USER": "User successfully updated status 2",
+    "DELETED_USER_ROLE": "User Role successfully deleted",
+    "CREATE_USER_ROLE": "User Role successfully added",
+    "CREATE_ROLE_PERMISSION": "Role permission successfully persisted",
+    "UPDATE_ROLE": "Role successfully updated",
+    "USER_AUTHENTICATED": "User successfully authenticated",
+    "USER_AUTHENTICATED_NRP": "User successfully authenticated via NRP",
+    "CREATE_ROLE_POSITION": "RolePosition successfully persisted",
+    "DELETE_ROLE_APPROVAL": "RoleApproval successfully deleted",
+    "CREATE_USER": "User successfully created",
+    "DELETE_USER_OTP": "UserOtp successfully deleted",
+    "DELETE_USER": "User successfully deleted",
+    "DELETE_ROLE": "Role successfully deleted",
+    "DELETE_ROLE_PERMISSION": "RolePermission successfully deleted",
+    "DELETE_ROLE_POSITION": "RolePosition successfully deleted",
+    "CQRS": {
+      "UPDATE_ROLE_POSITION": {
+        "LOCATION": "Location successfully updated",
+        "BRANCH": "Branch successfully updated",
+        "BU": "Business unit successfully updated",
+        "COMPANY": "Company successfully updated"
+      },
+      "DELETE_ROLE_POSITION":{
+        "LOCATION": "Location successfully deleted"
+      }
+    }
+  }
+}
